@@ -42,10 +42,6 @@ def main():
         #st.write('可后期输入调整')
         xlabname = st.text_input('请输入X标题：')
         ylabname = st.text_input('请输入Y标题：')
-        xmins = st.number_input('X最小值：',step= 0.1)
-        xmaxs = st.number_input('X最大值：',step= 0.1)
-        ymins = st.number_input('Y最小值：',step= 0.1)
-        ymaxs = st.number_input('Y最大值：',step= 0.1)
         st.subheader('坐标标题设置')
         # 获取用户输入的图像尺寸
         width = st.number_input('请输入图像宽度：', value=8.0, min_value=1.0, max_value=20.0, step=0.1)
@@ -70,14 +66,14 @@ def main():
                             markers = shapepoint, sizes = 10)
                 plt.xlabel(xlabname)
                 plt.ylabel(ylabname)
-                plt.title('散点图')
-                plt.xlim([xmins, xmaxs])
-                plt.ylim([ymins, ymaxs])
+                plt.title('Scatterplot')
+                #plt.xlim([xmins, xmaxs])
+                #plt.ylim([ymins, ymaxs])
                 plt.grid(False)
                 # 去除图例背景
                 plt.legend(loc='upper left', frameon=False)
                 # 设置刻度数量
-                #plt.locator_params(axis='both', nbins=5)
+                plt.locator_params(axis='both', nbins=5)
                 # 保存图形为图像文件
                 fig = plt.gcf()
                 return fig
@@ -90,14 +86,12 @@ def main():
                             errcolor ='black',edgecolor ='black',
                             palette = sns.color_palette(ecolor), 
                             lw=1, width =0.5)
-                plt.title('柱状图')
+                plt.title('Barplot')
                 plt.xlabel(xlabname)
                 plt.ylabel(ylabname)
-                plt.xlim([xmins, xmaxs])
-                plt.ylim([ymins, ymaxs])
                 plt.grid(False)
                 plt.legend(loc='upper left', frameon=False)
-                #plt.locator_params(axis='both', nbins=5)
+                plt.locator_params(axis='both', nbins=5)
                 fig = plt.gcf()
                 return fig
             # 绘制点线图
@@ -108,14 +102,12 @@ def main():
                             palette = sns.color_palette(ecolor), 
                             capsize = 0.2, markers = shapepoint, 
                             linestyles = lty)
-                plt.title('点线图')
+                plt.title('Lineplot')
                 plt.xlabel(xlabname)
                 plt.ylabel(ylabname)
-                plt.xlim([xmins, xmaxs])
-                plt.ylim([ymins, ymaxs])
                 plt.grid(False)
                 plt.legend(loc='upper left', frameon=False)
-                #plt.locator_params(axis='both', nbins=5)
+                plt.locator_params(axis='both', nbins=5)
                 fig = plt.gcf()
                 return fig
             if file is not None:
