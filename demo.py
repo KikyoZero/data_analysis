@@ -73,7 +73,6 @@ def main():
             st.image('param/linetype.jpg', caption='Linetypes')
     with col2:
             st.header('版本更新历史')
-            st.header('版本更新历史')
             button_clicked = st.button('查看详情')
             if button_clicked:
                 # 检查按钮点击状态
