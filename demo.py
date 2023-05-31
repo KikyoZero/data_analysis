@@ -73,9 +73,9 @@ def main():
             st.image('param/linetype.jpg', caption='Linetypes')
     with col2:
             st.header('版本更新历史')
-                if st.button('查看详情'):
-                    st.write('2023年5月30日完成初版发表')
-                    st.write('2023年5月31日添加箱型图绘制')
+            if st.button('查看详情'):
+                st.write('2023年5月30日完成初版发表')
+                st.write('2023年5月31日添加箱型图绘制')
             # 绘制散点图
             def plot_scatter_chart(df):
                 # 创建图形对象，并设置尺寸
