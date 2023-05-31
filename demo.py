@@ -24,7 +24,7 @@ def read_excel(file_path):
 
 # 主函数
 def main():
-    st.title('科研论文图表绘制')
+    st.title('443科研图表绘制')
     # 创建两列布局
     col1, col2 = st.columns([1, 2])
     with col1:
