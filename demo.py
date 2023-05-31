@@ -73,9 +73,22 @@ def main():
             st.image('param/linetype.jpg', caption='Linetypes')
     with col2:
             st.header('版本更新历史')
-            if st.button('查看详情'):
-                st.write('2023年5月30日完成初版发表')
-                st.write('2023年5月31日添加箱型图绘制')
+            st.header('版本更新历史')
+            button_clicked = st.button('查看详情')
+            if button_clicked:
+                # 检查按钮点击状态
+                if st.session_state.show_content:
+                    # 如果按钮已点击并且内容已显示，隐藏内容
+                    st.session_state.show_content = False
+                else:
+                    # 如果按钮已点击并且内容未显示，显示内容
+                    st.session_state.show_content = True
+            else:
+                # 如果按钮未点击，初始状态为隐藏内容
+                st.session_state.show_content = False
+            if st.session_state.show_content:
+                    st.write('2023年5月30日完成初版发表')
+                    st.write('2023年5月31日添加箱型图绘制')
             # 绘制散点图
             def plot_scatter_chart(df):
                 # 创建图形对象，并设置尺寸
