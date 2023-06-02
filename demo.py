@@ -47,14 +47,14 @@ def main():
             # 读取Excel文件
                 df = read_excel(file)
 
-        groupname = st.text_input('请输入分组：')
-        xname = st.text_input('请输入X列名：')
-        yname = st.text_input('请输入Y列名：')
+        groupname = st.text_input('请输入分组：', 'Group')
+        xname = st.text_input('请输入X列名：','X')
+        yname = st.text_input('请输入Y列名：', 'Y')
         st.subheader('作图细节调整')
         #st.write('可后期输入调整')
         plottitle = st.text_input('请输入标题：')
-        xlabname = st.text_input('请输入X标题：')
-        ylabname = st.text_input('请输入Y标题：')
+        xlabname = st.text_input('请输入X标题：','X')
+        ylabname = st.text_input('请输入Y标题：','Y')
         #xsteprange = df['X'].min()
         #ysteprange = df['X'].min()
         xmins = st.number_input('X最小值：',value= df[xname].min())
@@ -70,7 +70,7 @@ def main():
         ecolor = st.text_input('请输入颜色类别：','Pastel1')
         st.write('色彩选项：Accent、Blues、BrBG、BuGn、BuPu、CMRmap、Dark2、GnBu、Greys、OrRd、Paired、Pastel1、Pastel2、PiYG等')
         # 定义散点形状选项列表
-        spoptions = ['.','o','v','^','<','>','8','s','p','*','h','H','D','d','P','X']  
+        spoptions = ['.','o','v','^','<','>','s','p','*','h','H','D','d','P','X']  
         shapepoint = st.multiselect('请选择散点形状：', spoptions)
         if st.button('查看形状列表'):
             st.image('param/makers.jpg', caption='Makers')
