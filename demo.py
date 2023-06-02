@@ -11,7 +11,9 @@ from statsmodels.formula.api import ols
 # 解决streamlit不能显示中文的问题
 mpl.font_manager.fontManager.addfont('font/simhei.ttf') 
 sns.set_theme(context='notebook', style='ticks', palette='deep', font_scale=1, color_codes=True, rc=None )            
-sns.set_style({'font.sans-serif':['simhei','serif']}) # 适配中英文            
+
+sns.set_theme(context='notebook', style='ticks', palette='deep', font_scale=1, color_codes=True, rc=None )            
+sns.set_style({'font.sans-serif':['simhei','times']}) # 适配中英文         
 #plt.rcParams['xtick.direction'] = 'in' # 刻度朝内            
 #plt.rcParams['ytick.direction'] = 'in'            
 plt.rcParams['font.sans-serif'] = 'simhei' # 解决中文显示            
