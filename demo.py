@@ -262,6 +262,7 @@ def main():
                 st.pyplot(fig) 
                 output_path = '热图.jpg'
                 plt.savefig(output_path, dpi=600, format='jpg', bbox_inches='tight')
+                download_button(output_path)
             
             elif selected_option == '相关性图':
                 st.write('目前仍有缺陷，运行较慢，记得添加形状参数')
