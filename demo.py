@@ -35,7 +35,7 @@ def main():
     col1, col2 = st.columns([1, 2])
     with col1:
         st.subheader('注意事项')
-        st.write('因服务器限制暂不支持中文')
+       #st.write('因服务器限制暂不支持中文')
         st.write('分组类型为Group列，X轴数据为X列，Y轴数据为Y列')
         st.write('绘制图形的时候注意相关参数的选择，如散点图要选择点的形状不然会报错')
         if st.button('查看示例表格'):
@@ -102,7 +102,7 @@ def main():
                     st.write('2023年5月30日完成初版发表')
                     st.write('2023年5月31日添加箱型图绘制、保存')
                     st.write('2023年6月01日添加双因素方差分析')
-                    st.write('2023年6月02日添加自定义列名、热图和相关性图')
+                    st.write('2023年6月02日添加中文宋体支持、自定义列名、热图和相关性图')
             #绘制热图
             #hpcenter = st.number_input('请输入热图中心化值：',0.5)
             def heatmap_chart(df):
