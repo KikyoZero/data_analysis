@@ -231,44 +231,44 @@ def main():
             if selected_option == '散点图':
                 fig = plot_scatter_chart(df)
                 st.pyplot(fig)
-                output_path = "散点图.pdf"  # 指定保存的图像文件路径和名称
-                plt.savefig(output_path, dpi=600, format='pdf', bbox_inches='tight')
+                output_path = "散点图.jpg"  # 指定保存的图像文件路径和名称
+                plt.savefig(output_path, dpi=600, format='jpg', bbox_inches='tight')
             # 显示下载链接
                 download_button(output_path)
             elif selected_option == '柱状图':
                 fig = plot_bar_chart(df)
                 st.pyplot(fig)
-                output_path = "柱状图.pdf"  # 指定保存的图像文件路径和名称
-                plt.savefig(output_path, dpi=600, format='pdf', bbox_inches='tight')
+                output_path = "柱状图.jpg"  # 指定保存的图像文件路径和名称
+                plt.savefig(output_path, dpi=600, format='jpg', bbox_inches='tight')
             # 显示下载链接
                 download_button(output_path)
             elif selected_option == '点线图':
                 fig = plot_pointline_chart(df)
                 st.pyplot(fig)   
-                output_path = "点线图.pdf"  # 指定保存的图像文件路径和名称
-                plt.savefig(output_path, dpi=600, format='pdf', bbox_inches='tight')
+                output_path = "点线图.jpg"  # 指定保存的图像文件路径和名称
+                plt.savefig(output_path, dpi=600, format='jpg', bbox_inches='tight')
             # 显示下载链接
                 download_button(output_path)
             elif selected_option == '箱型图':
                 fig = plot_boxplot_chart(df)
                 st.pyplot(fig) 
-                output_path = '箱型图.pdf'
-                plt.savefig(output_path, dpi=600, format='pdf', bbox_inches='tight')
+                output_path = '箱型图.jpg'
+                plt.savefig(output_path, dpi=600, format='jpg', bbox_inches='tight')
             # 显示下载链接
                 download_button(output_path)
             elif selected_option == '热图':
                 #st.write('目前仍有缺陷，运行较慢，记得添加形状参数')
                 fig = heatmap_chart(df)
                 st.pyplot(fig) 
-                output_path = '热图.pdf'
-                plt.savefig(output_path, dpi=600, format='pdf', bbox_inches='tight')
+                output_path = '热图.jpg'
+                plt.savefig(output_path, dpi=600, format='jpg', bbox_inches='tight')
             
             elif selected_option == '相关性图':
                 st.write('目前仍有缺陷，运行较慢，记得添加形状参数')
                 fig = pairplot_chart(df)
                 st.pyplot(fig) 
-                output_path = '相关性图.pdf'
-                plt.savefig(output_path, dpi=600, format='pdf', bbox_inches='tight')
+                output_path = '相关性图.jpg'
+                plt.savefig(output_path, dpi=600, format='jpg', bbox_inches='tight')
             # 显示下载链接
                 download_button(output_path)
             else:
@@ -283,7 +283,7 @@ def download_button(output_path):
     # 创建下载按钮
     with open(output_path, 'rb') as file:
         contents = file.read()
-        st.download_button('保存结果', data=contents, file_name='Figure.pdf')
+        st.download_button('保存结果', data=contents, file_name='Figure.jpg')
 def perform_anova(data):
     # 创建一个线性模型
     model = ols('Y ~ Group * X', data=data).fit()
