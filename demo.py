@@ -9,14 +9,13 @@ from statsmodels.formula.api import ols
 #from fpdf import FPDF
 #from matplotlib.ticker import MaxNLocator
 # 解决streamlit不能显示中文的问题
-mpl.font_manager.fontManager.addfont('font/simhei.ttf') 
+mpl.font_manager.fontManager.addfont('font/simsun.ttc') 
+mpl.font_manager.fontManager.addfont('font/times.ttf') 
 sns.set_theme(context='notebook', style='ticks', palette='deep', font_scale=1, color_codes=True, rc=None )            
-
-sns.set_theme(context='notebook', style='ticks', palette='deep', font_scale=1, color_codes=True, rc=None )            
-sns.set_style({'font.sans-serif':['simhei','times']}) # 适配中英文         
+sns.set_style({'font.sans-serif':['simsun','times']}) # 适配中英文            
 #plt.rcParams['xtick.direction'] = 'in' # 刻度朝内            
 #plt.rcParams['ytick.direction'] = 'in'            
-plt.rcParams['font.sans-serif'] = 'simhei' # 解决中文显示            
+plt.rcParams['font.sans-serif'] = 'simsun' # 解决中文显示             
 plt.rcParams['axes.unicode_minus'] = False # 解决符号无法显示
 st.set_page_config(layout="wide")
 
