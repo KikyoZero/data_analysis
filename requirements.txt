@@ -6,3 +6,5 @@ Pillow == 9.5.0
 pip ==  23.1.2
 seaborn ==  0.12.2
 streamlit  == 1.22.0
+statsmodels == 0.14.0
+scipy == 1.10.1
