@@ -106,7 +106,13 @@ def main():
             #绘制热图
             #hpcenter = st.number_input('请输入热图中心化值：',0.5)
             def heatmap_chart(df):
+                fig, ax = plt.subplots(figsize=(width, height))
                 sns.heatmap(df, center = 0.5,  cmap= ecolor)
+                plt.xlabel(xlabname)
+                plt.ylabel(ylabname)
+                plt.title(plottitle)
+                fig = plt.gcf()
+                return fig
             # 绘制相关性图
             def pairplot_chart(df):
                 # 创建图形对象，并设置尺寸
